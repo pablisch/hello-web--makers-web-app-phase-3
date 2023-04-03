@@ -48,7 +48,7 @@ describe Application do
     end
 
     it 'returns 200 OK with correct content' do
-      response = post('/sort-names', names: "Zoe,Alice,Sabina,Julia,Kieran")
+      response = post('/sort-names?names=Zoe,Alice,Sabina,Julia,Kieran')
       expect(response.status).to eq(200)
       expect(response.body).to eq "Alice,Julia,Kieran,Sabina,Zoe"
     end

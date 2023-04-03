@@ -50,3 +50,13 @@ class Application < Sinatra::Base
     return names.split(",").sort.join(",")
   end
 end
+
+get '/albums/:id' do
+  album_id = params[:id]
+  # Use album_id to retrieve the corresponding album from the database.
+end
+
+delete '/albums/:id' do
+  album_id = params[:id]
+  # Use album_id to delete the corresponding album from the database.
+end
