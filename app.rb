@@ -8,9 +8,9 @@ class Application < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/' do
-    "Some response data"
-  end
+  # get '/' do
+  #   "Some response data"
+  # end
 
   get '/home' do
     # The code here is executed when a request is received and we need to 
@@ -25,12 +25,12 @@ class Application < Sinatra::Base
     return 'Some response data'
   end
 
-  get '/hello' do
+  get '/help' do
     name = params[:name]
     return "Hello #{name}!"
   end
 
-  post '/hello' do
+  post '/help' do
     return "Hello World!"
   end
 
@@ -49,14 +49,26 @@ class Application < Sinatra::Base
     names = params[:names]
     return names.split(",").sort.join(",")
   end
+
+  get '/hello' do
+    return erb(:hello)
+  end
+
+  get '/' do
+    @name = params[:name]
+    return erb(:index)
+  end
+
+  get '/my_test' do
+    @greeting = params[:greeting]
+    @addressing = params[:addressing]
+    @name1 = params[:name1]
+    @name2 = params[:name2]
+    @name3 = params[:name3]
+    @place = params[:place]
+    return erb(:my_test)
+  end
+
+
 end
 
-get '/albums/:id' do
-  album_id = params[:id]
-  # Use album_id to retrieve the corresponding album from the database.
-end
-
-delete '/albums/:id' do
-  album_id = params[:id]
-  # Use album_id to delete the corresponding album from the database.
-end
