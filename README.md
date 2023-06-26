@@ -21,7 +21,7 @@ There is no practical purpose beyond this since they are largely testing fabrica
 
 This is what you will find when you load the app:
 
-<img src="images/hello.png" alt="Main page" style="width:450px">
+<img src="images/hello.png" alt="Main page" style="width:450px;border:1px solid black;">
 
 That is why I recommend you find a more interesting repo to explore. It is not hard to do.
 
