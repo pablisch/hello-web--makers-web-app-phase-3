@@ -19,4 +19,10 @@ Each route in the app was designed to fulfill a specific purpose according to th
 
 There is no practical purpose beyond this since they are largely testing fabricated routes that require arbitrary parameters.
 
+This is what you will find when you load the app:
+
+<img src="images/hello.png" alt="Main page" style="width:450px">
+
+That is why I recommend you find a more interesting repo to explore. It is not hard to do.
+
 
